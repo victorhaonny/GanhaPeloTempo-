@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vídeo de Fundo e Imagem</title>
+    
+    <!-- Importando a fonte JetBrains Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    
     <style>
         body {
             text-align: center;
-            font-family: Arial, sans-serif;
+            font-family: 'JetBrains Mono', monospace; /* Aplicando a fonte JetBrains Mono */
             background-color: #000000; /* Oled preto */
             color: white;
             margin: 0;
@@ -56,6 +60,12 @@
             font-size: 1rem;
             color: white;
         }
+
+        .social-container .name {
+            font-size: 0.8rem; /* Tamanho menor para os nomes */
+            color: white;
+            margin-bottom: 5px;
+        }
     </style>
 </head>
 <body>
@@ -71,21 +81,27 @@
         <!-- Links para as redes sociais -->
         <div class="social-container">
             <!-- Seu GitHub -->
-            <p>GitHub Click</p>
+            <p class="name">Victor</p> <!-- Nome Victor -->
             <a href="https://github.com/" target="_blank">
                 <img src="https://skillicons.dev/icons?i=github" alt="GitHub">
             </a>
 
             <!-- GitHub do Matheus Pimentel -->
-            <p>GitHub Matheus</p>
+            <p class="name">Matheus</p> <!-- Nome Matheus -->
             <a href="https://github.com/matheuspimentel04" target="_blank">
                 <img src="https://skillicons.dev/icons?i=github" alt="GitHub Matheus">
             </a>
 
-            <!-- LinkedIn -->
-            <p>LinkedIn Click</p>
+            <!-- LinkedIn Victor -->
+            <p class="name">Victor</p> <!-- Nome Victor -->
             <a href="https://www.linkedin.com/in/victor-haonny-novaes-de-araujo-aa3989337?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=web" target="_blank">
                 <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn">
+            </a>
+
+            <!-- LinkedIn Matheus -->
+            <p class="name">Matheus</p> <!-- Nome Matheus -->
+            <a href="https://www.linkedin.com/in/matheus-pimentel-01ab1b338/" target="_blank">
+                <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn Matheus">
             </a>
         </div>
     </div>
