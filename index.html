@@ -15,13 +15,7 @@
         }
 
         #background-video {
-            width: 560px;
-            height: 315px;
-            border: none;
-            margin-top: 20px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+            display: none; /* Esconde o vídeo */
         }
 
         .image-container {
@@ -48,28 +42,20 @@
     </style>
 </head>
 <body>
+    <!-- Novo vídeo como fundo (não visível) -->
     <iframe 
         id="background-video"
-        src="https://www.youtube.com/embed/f_Z1E32mxGg?start=2&autoplay=1&controls=0&showinfo=0&autohide=1" 
+        src="https://www.youtube.com/embed/MDmcVLadrmY?start=2&autoplay=1&controls=0&showinfo=0&autohide=1" 
         frameborder="0"
         allow="autoplay; encrypted-media"
         allowfullscreen>
     </iframe>
 
+    <!-- Conteúdo visível -->
     <h2>Não Grita <span class="emoji">😎</span></h2>
 
     <div class="image-container">
         <img src="https://static-storage.dnoticias.pt/www-assets.dnoticias.pt/images/configuration/OR/239697850_388830892603457_4138336186087116976_n.jpg" alt="Cristiano Ronaldo com a mão na boca">
     </div>
-
-    <script>
-        var backgroundVideo = document.getElementById('background-video');
-
-        setInterval(function() {
-            if (backgroundVideo.contentWindow.document.readyState === "complete") {
-                var backgroundVideoTime = backgroundVideo.contentWindow.document.getElementsByTagName("video")[0].currentTime;
-            }
-        }, 1000);
-    </script>
 </body>
 </html>
