@@ -42,14 +42,8 @@
     </style>
 </head>
 <body>
-    <!-- Novo vídeo como fundo (não visível) -->
-    <iframe 
-        id="background-video"
-        src="https://www.youtube.com/embed/MDmcVLadrmY?start=2&autoplay=1&controls=0&showinfo=0&autohide=1" 
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen>
-    </iframe>
+    <!-- Vídeo de fundo invisível -->
+    <div id="player"></div>
 
     <!-- Conteúdo visível -->
     <h2>Não Grita <span class="emoji">😎</span></h2>
@@ -57,6 +51,31 @@
     <div class="image-container">
         <img src="https://static-storage.dnoticias.pt/www-assets.dnoticias.pt/images/configuration/OR/239697850_388830892603457_4138336186087116976_n.jpg" alt="Cristiano Ronaldo com a mão na boca">
     </div>
+
+    <script>
+        // Carregar a API do YouTube
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '0', // Invisível
+                width: '0',  // Invisível
+                videoId: 'MDmcVLadrmY', // ID do vídeo
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        function onPlayerReady(event) {
+            player.setVolume(100); // Volume máximo (0 a 100)
+            player.setPlaybackRate(2); // Velocidade 2x (rápido)
+            player.playVideo(); // Reproduzir o vídeo
+        }
+    </script>
 </body>
 </html>
-
