@@ -21,6 +21,8 @@
         .image-container {
             display: flex;
             justify-content: center;
+            align-items: center;
+            gap: 20px; /* Espaço entre os elementos */
             margin-top: 20px;
         }
 
@@ -39,6 +41,21 @@
             display: inline-block;
             vertical-align: middle;
         }
+
+        .social-container {
+            text-align: center;
+        }
+
+        .social-container img {
+            width: 40px; /* Tamanho dos ícones das redes sociais */
+            margin: 10px;
+        }
+
+        .social-container p {
+            margin: 5px 0;
+            font-size: 1rem;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -50,6 +67,20 @@
 
     <div class="image-container">
         <img src="https://static-storage.dnoticias.pt/www-assets.dnoticias.pt/images/configuration/OR/239697850_388830892603457_4138336186087116976_n.jpg" alt="Cristiano Ronaldo com a mão na boca">
+        
+        <!-- Links para as redes sociais -->
+        <div class="social-container">
+            <!-- GitHub -->
+            <p>GitHub Click</p>
+            <a href="https://github.com/" target="_blank">
+                <img src="https://skillicons.dev/icons?i=github" alt="GitHub">
+            </a>
+            <!-- LinkedIn -->
+            <p>LinkedIn Click</p>
+            <a href="https://www.linkedin.com/in/victor-haonny-novaes-de-araujo-aa3989337?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=web" target="_blank">
+                <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn">
+            </a>
+        </div>
     </div>
 
     <script>
@@ -79,4 +110,3 @@
     </script>
 </body>
 </html>
-
