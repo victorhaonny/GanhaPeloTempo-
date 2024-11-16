@@ -1,2 +1,2 @@
-# GanhaPeloTempo-
+#SemTEMPO-
 Troll
