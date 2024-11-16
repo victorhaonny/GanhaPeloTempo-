@@ -3,17 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vídeos Simultâneos com Tempo Definido</title>
-    <script>
-        window.onload = function() {
-            // Abre ambos os vídeos ao mesmo tempo, começando aos 18 segundos
-            window.open("https://www.youtube.com/watch?v=OkscEokV238&t=18s", "_blank");
-            window.open("https://www.youtube.com/watch?v=31j4DIpgY9U&list=RDMM&start_radio=1&rv=OkscEokV238&t=18s", "_blank");
+    <title>Vídeo de Fundo e Imagem</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
         }
-    </script>
+
+        #background-video {
+            width: 560px;
+            height: 315px;
+            border: none;
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        img {
+            width: 200px;
+            margin: 20px 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 20px;
+        }
+
+        .emoji {
+            font-size: 2rem;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
 </head>
 <body>
-    <h1>Ambos os vídeos começarão aos 18 segundos simultaneamente!</h1>
+    <iframe 
+        id="background-video"
+        src="https://www.youtube.com/embed/f_Z1E32mxGg?start=2&autoplay=1&controls=0&showinfo=0&autohide=1" 
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+    </iframe>
+
+    <h2>Não Grita <span class="emoji">😎</span></h2>
+
+    <div class="image-container">
+        <img src="https://static-storage.dnoticias.pt/www-assets.dnoticias.pt/images/configuration/OR/239697850_388830892603457_4138336186087116976_n.jpg" alt="Cristiano Ronaldo com a mão na boca">
+    </div>
+
+    <script>
+        var backgroundVideo = document.getElementById('background-video');
+
+        setInterval(function() {
+            if (backgroundVideo.contentWindow.document.readyState === "complete") {
+                var backgroundVideoTime = backgroundVideo.contentWindow.document.getElementsByTagName("video")[0].currentTime;
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
-
